@@ -12,6 +12,7 @@ public class WelcomeMapper {
     private static final String NAMESPACE = "com.cafe24.webapp.welcome.dao.WelcomeMapper";
     @Autowired
     private SqlSessionTemplate sqlSession;
+
     public List<WelcomeVO> selectWelcomeList(WelcomeVO vo) throws Exception {
         return sqlSession.selectList(NAMESPACE + ".selectWelcomeList", vo);
     }
